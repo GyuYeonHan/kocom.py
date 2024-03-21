@@ -292,7 +292,7 @@ def thermo_parse(value):
 
 def light_parse(value):
     ret = {}
-    for i in range(1, int(config.get('User', 'light_count'))+1):
+    for i in range(1, int(config.get('User', 'livingroom_light_count'))+1):
         ret['light_'+str(i)] = 'off' if value[i*2-2:i*2] == '00' else 'on'
     return ret
 
